@@ -27,3 +27,5 @@ the terminal is a text window where you type the commands instead of clicking. d
 
 ## One thing that confused me
 i was initially confused as to how to close an environment and folder in vs code
+
+Git snapshot created.
