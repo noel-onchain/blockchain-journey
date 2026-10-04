@@ -1,4 +1,5 @@
-const notes = ["Learn Git", "Push to GitHub"];
+const saved = localStorage.getItem("notes");
+const notes = saved ? JSON.parse(saved) : ["Learn Git", "Push to GitHub"];
 
 const input = document.querySelector("#note-input");
 const addBtn = document.querySelector("#add-btn");
@@ -13,11 +14,16 @@ function render() {
 deleteBtn.textContent = "Delete";
 deleteBtn.addEventListener("click", function () {
   notes.splice(notes.indexOf(note), 1);
+  save();
   render();
 });
-item.appendChild(deleteBtn);
+    item.appendChild(deleteBtn);
     list.appendChild(item);
   }
+}
+
+function save() {
+  localStorage.setItem("notes", JSON.stringify(notes));
 }
 
 addBtn.addEventListener("click", function () {
@@ -27,6 +33,7 @@ addBtn.addEventListener("click", function () {
   }
   notes.push(text);
   input.value = "";
+  save();
   render();
 });
 
