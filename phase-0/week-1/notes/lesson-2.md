@@ -30,3 +30,9 @@ HTTP/HTTPS = request/response between browser and server
 ## Why this matters for blockchain
 Blockchain later uses P2P (computers talking to each other, not only client→one company server).
 
+A hash is a fingerprint, not encryption.
+
+A block in a blockchain stores the hash of the previous block, so changing old data changes every hash after it.
+
+
+
