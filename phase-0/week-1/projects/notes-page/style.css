@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  padding: 40px;
+}
+
+input, button {
+  padding: 8px;
+  margin-right: 8px;
+}
+
+li {
+  margin: 8px 0;
+}
